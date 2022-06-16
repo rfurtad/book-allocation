@@ -70,3 +70,7 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem "faker", "~> 2.21"
+
+gem "meilisearch-rails", "~> 0.5.2"

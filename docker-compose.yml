@@ -1,0 +1,22 @@
+version: '3.0'
+services:
+  app:
+    image: book-allocation-app
+    build: .
+    ports:
+      - "8080:3000"
+    links:
+      - redis:redis
+    stdin_open: true
+  redis:
+    image: "redis:alpine"
+    ports:
+      - "6379:6379"
+  mysql-db:
+    image: "mysql:latest"
+    ports:
+      - "3306:3306"
+  meilisearch:
+    image: "getmeili/meilisearch"
+    ports:
+      - "7700:7700"
